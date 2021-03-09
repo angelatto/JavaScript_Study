@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	
+		<script>
+			var fruits = ["apple", "orange", "cherry"];
+			
+			fruits.forEach(function(item, index) {
+				console.log(index, " : " , item);
+			});
+			
+			fruits.forEach((item, index) => {
+				console.log(index, " : " , item);
+			});
+
+			fruits.forEach(item => console.log(item));
+			
+			// map 반복 처리를 해서 원래 아이템을 변형
+			var arr1 = fruits.map((item) => item.length);
+			console.log(arr1);
+			
+			// filter 반복 처리를 해서 필요없는 아이템을 제거한다. 
+			var arr2 = fruits.filter(item => {
+				if(item.startsWith("o")){
+					return false;
+				} else{
+					return true;
+				}
+			});
+			console.log(arr2);
+			
+			// reduce 반복 처리를 해서 단일값 얻기 
+			var numbers = [45,4,9,50, 25];
+			var sum = numbers.reduce(myFunc, 0); // 초기값을 주지 않으면 배열의 첫번째요소랑 두번째요소가 들어간다. 
+			
+			function myFunc(total, value) {
+				console.log(total, value);
+			 	return total + num;
+			}
+			console.log(sum);
+			
+		</script>
+	
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				날짜 정보 얻기 
+			</div>
+			<div class="card-body">
+
+			</div>
+		</div>
+		
+	</body>
+</html>
