@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	
+		<script>
+			console.log("hello, javascript1!");
+		</script>
+		<script src="exam01.js"></script>
+		
+<!-- 	
+	html 파일이 저장된 위치는 서버지만, 클라이언트에서 실행된다. 	
+	script부분은 브라우저에서 실행한다. 서버에서 실행하는 것이 아니다. 
+ -->
+	</head>
+	<body>
+		<h5>index.html</h5>
+		<hr/>
+		<div class="card">
+			<div class="card-header">
+				console
+			</div>
+			<div class="card-body">
+			<!-- 자바스크립트 작성 위치, 태그 주석 , 브라우저에 랜더링 되지 않는다.  -->
+				<script>	
+					let x = 2;
+					let result = x ** 3;
+					console.log("result: ", result);
+
+					x **= 4;
+					console.log("x: ", x);
+				</script>
+				
+				<script>
+					let var1 = 3.5;
+					console.log(typeof var1); //number type
+					
+					let var2 = "JavaScript";
+					console.log(typeof var2); //string type
+				
+					let var3 = false;
+					console.log(typeof var3); //boolean type
+					
+					let var4 = {name: "Javascript"};  
+					console.log(typeof var4); // object type
+					
+					let var5 = function() {};
+					console.log(typeof var5); // function type
+					
+					let var6 = () => {}; // arrow function 람다식 
+					console.log(typeof var6); // function type
+				</script>
+				
+				<script>
+					let var7 = 3;
+					let var8 = "3";
+					console.log(var7 == var8); // true
+					console.log(var7 === var8); // 얘를 사용해서 값을 비교해야 한다. 타입까지 비교하니까 
+				
+					console.log(var7 != var8);	// false
+					console.log(var7 !== var8);	// true
+				</script>
+				
+				<script>
+					// 부정 || 값 => 값 
+					console.log( "" || "abc"); // abc 
+					console.log(null || "abc"); // abc 
+					var var11;
+					console.log(var11 || 5);  // 5
+					console.log(0 || 5);  // 5
+					console.log(false || 5); // 5
+					
+					// 긍정의 값 || 값 => 긍정의 값 
+					console.log("a" || "abc"); //a
+					console.log(1 || "abc"); //1
+					console.log(true || "abc"); //true
+					
+					// 부정의 값 && 값 => 부정의 값 
+					console.log("" && "abc"); // 아무것도 출력되지 않음 
+					console.log(null && "abc");  // null
+					console.log(false && "abc");  // false
+					
+					// 긍정의 값 && 값 => 값 
+					console.log("a" && "abc"); // abc 
+					console.log(true && "abc");  // abc
+					console.log(true && false);  // false
+					
+					var var10;
+					console.log(typeof var10); // undefined type
+					
+					console.log(typeof var10);
+				</script> 
+			</div>
+		</div>
+		
+	</body>
+</html>
