@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	
+		<script>
+			// 배열 구조 분해 할당 1 - ES6에서 새로 생김 
+			var arr1 = [10, 20];
+			/* var x = arr1[0];
+			var y = arr1[1]; */
+			var [x, y] = arr1;
+			console.log("x: ", x);
+			console.log("y: ", y);
+			
+			// 배열 구조 분해 할당 2
+			var arr2 = [10, 20, 30, 40, 50];
+			var [x, y, ...rest] = arr2; // (용어 정리) ...: rest operator
+			console.log(x);
+			console.log(y);
+			console.log(rest); // [30, 40, 50] 배열 
+			
+			var arr3 = [...arr2, 60, 70]; // (용어 정리) ...: spread operator
+			console.log(arr3);
+			
+			// 객체 구조 분해 할당 
+			var obj1 = {x:3, y:5, z:7};
+		/* 	var x = obj.x;
+			var y = obj.y; */
+			
+			// 속성의 이름과 변수의 이름이 같아야 값이 들어간다. 
+			var {x, y} = obj1;
+			console.log(x);
+			console.log(y);
+			
+			var obj2 = {...obj1, x:4, y:9};  
+			console.log(obj2); // {x:4, y:9, z:7} 값 바꿀 수 있음 
+			
+		</script>
+	
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				구조 분해 할당 
+			</div>
+			<div class="card-body">
+
+			</div>
+		</div>
+		
+	</body>
+</html>

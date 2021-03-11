@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	
+		<script>
+			function fun1() {
+				console.log("fun1() 실행");
+				fun2(fun3, fun4); // 함수의 번지 전달 
+			}
+			
+			function fun2(success, failure)) { // 파라미터로 번지가 전달되어 callback이 참조하는 것과 fun3이 참조하는 곳이 같음 
+				console.log("시간을 요하는 작업을 진행... ");
+				let result = true;
+			
+				if(true){
+					success(); // 성공 콜백 
+				} else{
+					failure(); // 실패 콜백
+				}
+				callback();
+			}
+			
+			function fun3() {
+				console.log("작업 성공 통보");
+			}
+			
+			function fun4() {
+				console.log("작업 실패 통보");
+			}
+		
+		</script>
+		
+	
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				콜백 이해하기 
+			</div>
+			<div class="card-body">
+				<button onclick="fun1()" class="btn btn-danger btn-sm">
+					함수 호출 
+				</button>
+			</div>
+		</div>
+		
+	</body>
+</html>

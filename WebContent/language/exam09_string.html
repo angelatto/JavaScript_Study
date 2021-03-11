@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	
+		<script>
+			/* 스트링은 불변이기 때문에 const로 선언 */
+			const ssn = "123456-1234567";
+			console.log(ssn.length);
+			
+			const sex = ssn.charAt(7);
+			console.log("sex:", sex);
+			
+			const part1 = ssn.substr(0, 6); // 시작 인덱스부터 해당 길이만큼 
+			console.log(part1);
+			
+			const part2 = ssn.substring(7, ssn.length); // 시작 인덱스와 끝 인덱스 지정 
+			console.log(part2);
+			
+			const partArray = ssn.split("-");
+			console.log(partArray);
+			console.log(partArray[0]);
+			
+		</script>
+	
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				문자열 처리 
+			</div>
+			<div class="card-body">	
+			</div>
+		</div>
+		
+	</body>
+</html>
