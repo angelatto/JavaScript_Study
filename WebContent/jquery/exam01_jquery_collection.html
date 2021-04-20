@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+		<script>
+			const handleClick1 = () => {
+				var mydiv = $(".mydiv"); // mydiv 클래스 객체 여러개가 선택된다. 
+				mydiv.css("background-color", "yellow");
+				mydiv.html("<img src='/javascript/common/images/photo1.jpg' height='50'>");
+			};
+	
+			const handleClick2 = () => {
+				var mydiv = $(".my-red"); // 컬렉션 객체가 리턴된다. 
+				mydiv.css("background-color", "lightpink");
+			};
+	
+			const handleClick3 = () => {
+				var mydiv = $("#imgBox1, #imgBox2"); // 콤마는 또는을 의미한다.  
+				mydiv.append("<img src='/javascript/common/images/photo1.jpg' height='100'>");
+			};
+	
+		</script>
+		<style>
+			div .mydiv{
+				width: 100px;
+				height: 100px;
+				display: inline-block;
+				border: 1px solid black;
+				margin: 10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+		<div class="card">
+			<div class="card-header">
+				jQuery() 함수가 리턴하는 컬렉션 사용방법 
+			</div>
+			
+			<div class="card-body">
+				<button class="btn btn-danger btn-sm mb-2" onclick="handleClick1()">모든 div 배경 변경 버튼</button>
+				<button class="btn btn-danger btn-sm mb-2" onclick="handleClick2()">my-red div 배경 변경 버튼</button>
+				<hr/>
+				<div class="mydiv"></div>
+				<div class="mydiv"></div>
+				<div class="mydiv my-red"></div>
+				<div class="mydiv my-red"></div>
+				<div class="mydiv my-red"></div>
+			</div>
+			<button id="imgBox1" onclick="handleClick3()">img1</button>
+			<button id="imgBox2" onclick="handleClick3()">img2</button>
+		</div>
+	</body>
+</html>
